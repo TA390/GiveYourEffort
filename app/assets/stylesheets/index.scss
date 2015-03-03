@@ -45,6 +45,7 @@ h6 {
     margin: 0;
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
     font-size: 5em;
+  text-align: center;
 }
 
 .intro-divider {
@@ -55,6 +56,66 @@ h6 {
 
 .intro-message > h3 {
     text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+}
+
+/* To resize picture and fade the carousel */
+.carousel-pic {
+  width: 1680px;
+  height: 1050px;
+  max-height: 1050px;
+   max-width: 1050px;
+  -webkit-filter: grayscale(0.7);
+  //opacity: .;
+  //background-color: black;
+  -webkit-filter: contrast(0.7);
+
+
+}
+
+.carousel-fade {
+  .carousel-inner {
+    .item {
+      opacity: 0;
+      transition-property: opacity;
+    }
+
+    .active {
+      opacity: 1;
+    }
+
+    .active.left,
+    .active.right {
+      left: 0;
+      opacity: 0;
+      z-index: 1;
+    }
+
+    .next.left,
+    .prev.right {
+      opacity: 1;
+    }
+  }
+
+  .carousel-control {
+    z-index: 2;
+  }
+}
+
+.carousel-caption {
+  background-color: transparent;
+  
+  //max-width: 550px;
+  padding: 0 20px;
+  margin:0 auto;
+  margin-bottom:20%;
+  text-align:center;
+
+}
+
+.carousel-caption > h1 {
+  margin: 0;
+  text-shadow: 2px 2px 3px rgba(0,0,0,0.6);
+  font-size: 5em;
 }
 
 @media(max-width:767px) {
@@ -163,4 +224,4 @@ footer {
 
 p.copyright {
     margin: 15px 0 0;
-}s
+}
